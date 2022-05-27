@@ -1,0 +1,11 @@
+npm install -g nodemon
+npm install pm2
+
+npm install --save path
+npm install express
+npm install morgan      // log
+npm install body-parser // post
+
+//비동기적인 것을 순차적으로 할 때
+npm install fxjs
+npm install ramda
