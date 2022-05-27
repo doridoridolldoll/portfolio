@@ -9,5 +9,5 @@ window.onload = () =>{
       if (scrollpos >= about.offsetHeight - 200) add_class_on_scroll(about)
       if (scrollpos >= tech.offsetHeight + 300) add_class_on_scroll(tech)
       if (scrollpos >= awards.offsetHeight + 700) add_class_on_scroll(awards) 
-    }) 
+    }) dd
 } 
