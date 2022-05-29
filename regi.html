@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+	</style>
+	<script>
+		window.onload = function(){
+			var btnSend = document.getElementById("btnSend");
+			btnSend.onclick = function(event){
+				event.preventDefault();
+				
+				var name = document.getElementById("name");
+				if(name.value == ""){
+					alert('이름을 확인하세요.');
+					name.focus();
+					return;
+				}
+				var id = document.getElementById("id");
+				if(id.value == ""){
+					alert('아이디를 확인하세요.');
+					id.focus();
+					return;
+				}
+				pass = document.getElementById("pass");
+				repass = document.getElementById("repass");
+				var id = document.getElementById("id");
+				if(pass.value == ""){
+					alert('비밀번호를 확인하세요.');
+					pass.focus();
+					return;
+				}
+				if(pass.value != repass.value){
+					alert('비밀번호가 맞지 않습니다.');
+					pass.value = "";
+					repass.value = "";
+					pass.focus();
+					return;
+				}
+				
+				document.getElementById("frm").submit();
+			}
+	    }
+	</script>
+</head>
+<body>
+	<form method="post" id="frm">
+		<h1>회원가입</h1><hr>
+		이름: <input name="name" id="name" type="text"><br>
+		ID: <input name="id" id="id" type="text"><br>
+		비밀번호: <input name="pass" id="pass" type="password"><br>
+		비밀번호확인: <input id="repass" type="password"><br>
+		<input type="submit" id="btnSend">
+	</form>
+</body>
+</html>
