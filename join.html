@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script>
+      window.onload = function(){
+      document.getElementById(frm).onclick() = function check() {
+        const id = document.querySelector('[name="email"]').value;
+        if (id =='') {
+          alert("아이디를 확인해주세요.");
+          return false;
+        }
+
+        const password = document.querySelector('[name="password"]').value;
+        if (password.length < 8) {
+          alert("최소 8자리 이상의 비밀번호를 설정 해 주세요");
+          return false;
+        }
+
+        const passwordConfirm = document.querySelector(
+          '[name="password_confirm"]'
+        ).value;
+        if (password != passwordConfirm) {
+          alert("비밀번호 확인이 일치하지 않습니다");
+          return false;
+        }
+
+        return true;
+
+        alert('회원가입을 축하합니다.')
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <form id="frm" method="get" onsubmit="return check()">
+      <table>
+        <tbody>
+          <tr>
+            <td>아이디</td>
+            <td><input type="text" name="email" /></td>
+          </tr>
+          <tr>
+            <td>이름</td>
+            <td><input type="name" name="name" /></td>
+          </tr>
+          <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="password" /></td>
+          </tr>
+          <tr>
+            <td>비밀번호 확인</td>
+            <td><input type="password" name="password_confirm" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="가입하기" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

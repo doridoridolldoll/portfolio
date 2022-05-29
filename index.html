@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        var sbm = document.getElementById("sbm");
+        sbm.onclick = function (event) {
+          event.preventDefault();
+          var id = document.getElementById("id");
+          if (id.value == "") {
+            alert("아이디를 확인하세요.");
+            id.focus();
+            return;
+          }
+          pass = document.getElementById("pass");
+          if (pass.value == "") {
+            alert("비밀번호를 확인하세요.");
+            pass.focus();
+            return;
+          }
+          document.getElementById("frm").submit();
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form method="get" id="frm" action="app">
+      <table>
+        <tr>
+          <td><label>ID</label></td>
+          <td><input type="text" name="id" id="id" /></td>
+        </tr>
+        <tr>
+          <td><label>PW</label></td>
+          <td><input type="password" name="pass" id="pass" /></td>
+        </tr>
+      </table>
+      <input type="submit" id="sbm" />
+    </form>
+  </body>
+</html>
